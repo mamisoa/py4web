@@ -197,7 +197,7 @@ then
     echo "======================================="
     mkdir -p /etc/nginx/ssl
     pushd /etc/nginx/ssl
-    openssl genrsa 1024 > py4web.key
+    openssl genrsa 2048 > py4web.key
     chmod 400 py4web.key
     openssl req -new -x509 -nodes -sha1 -days 1780 -key py4web.key > py4web.crt
     openssl x509 -noout -fingerprint -text < py4web.crt > py4web.info
